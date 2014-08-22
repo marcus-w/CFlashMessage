@@ -1,0 +1,22 @@
+{   
+    "name": "mwhd/flashmessage",    
+    "type": "library",
+    "description": "Flash class using sessions, written for ANAX-MVC.",
+    "keywords": ["flash", "mvc", "anax", "mahd", "CFlashMessage"],
+    "homepage": "http://dbwebb.se",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcus Westerlund",
+            "email": "mwesterl@kth.com",
+            "homepage": "-"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "mwhd\\": "src/" }
+    }
+
+}

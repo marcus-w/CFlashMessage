@@ -1,0 +1,16 @@
+.flashy_notice {
+    color: #0074D9;
+    background-color: #CCCCFF;
+}
+.flashy_error {
+    color: #FF4136;
+    background-color: #FF9999;
+}
+.flashy_success {
+    color: #2ECC40;
+    background-color: #CCFFCC;
+}
+.flashy_warning {
+    color: #FF851B;
+    background-color: #FFFFCC;
+} 
