@@ -2,7 +2,7 @@
 
 namespace mwhd\CFlashMessage;
 
-class Flash
+class CFlashMessage
 {
     // types of messages that are valid
     public $valid = ['info', 'danger', 'success', 'warning'];
