@@ -1,7 +1,9 @@
 <?php
+
 namespace mawd14\CFlashMessage;
+
     require_once(__DIR__ . '/../../src/CFlashMessage/CFlashMessage.php');
-class FlashTest extends \PHPUnit_Framework_TestCase
+    class FlashTest extends \PHPUnit_Framework_TestCase
 {
 public function setup()
 {
@@ -47,7 +49,7 @@ public function testGetWithIcon()
 }
 public function testGetEmptyMessages()
 {
-    $output = $this->flash->get();
+    $output = $this->flash->getMessage();
     $this->assertEquals(null, $output);
 }
 }
