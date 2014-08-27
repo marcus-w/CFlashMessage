@@ -1,5 +1,5 @@
 <?php
-namespace kalkih\Flash;
+namespace mawd14\CFlashMessage;
     require_once(__DIR__ . '/../../src/CFlashMessage/CFlashMessage.php');
 class FlashTest extends \PHPUnit_Framework_TestCase
 {
