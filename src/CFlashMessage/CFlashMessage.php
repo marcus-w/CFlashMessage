@@ -5,7 +5,7 @@ namespace mwhd\CFlashMessage;
 class CFlashMessage
 {
     // types of messages that are valid
-    public $valid = ['info', 'danger', 'success', 'warning'];
+    public $valid = ['info', 'success', 'warning', 'error'];
 
     function __construct()
     {
@@ -14,6 +14,7 @@ class CFlashMessage
             $_SESSION['flash'] = array();
         }
     }
+
 
     /**
     * Clear the session of messages
@@ -24,10 +25,11 @@ class CFlashMessage
         $_SESSION['flash'] = null;
     }
 
+
     /**
     * Set mesage and type
     *
-    * @param string $type the message type (info, danger, success, warning)
+    * @param string $type the message type (info, success, warning, error)
     * @param string $message the message
     */
     public function message($type = 'info', $message)
@@ -44,6 +46,7 @@ class CFlashMessage
         ];
     }
 
+
     /**
     * Sets a message of type notice
     *
@@ -54,15 +57,6 @@ class CFlashMessage
         message('info', $message);
     }
 
-    /**
-    * Sets a message of type error
-    *
-    * @param string $message the message
-    */
-    public function danger($message)
-    {
-        message('danger', $message);
-    }
 
     /**
     * Sets a message of type success
@@ -84,6 +78,18 @@ class CFlashMessage
         message('warning', $message);
     }
 
+
+    /**
+    * Sets a message of type error
+    *
+    * @param string $message the message
+    */
+    public function error($message)
+    {
+        message('error', $message);
+    }
+
+
     /**
     * Get messages
     * 
@@ -99,7 +105,7 @@ class CFlashMessage
                 $type = $flash['type'];
                 $message = $flash['message'];
 
-                $messages .= "<div class='alert alert-{$type}'>\n";
+                $messages .= "<div class='flash_{$type}'>\n";
                 $messages .= "  " . $message . "\n</div>\n";
             }
 
