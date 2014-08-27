@@ -29,7 +29,7 @@ $app->router->add('', function() use ($app) {
     
 
     $app->theme->setVariable('title', "Flash test")
-           ->setVariable('main', $app->flash->get());
+           ->setVariable('main', $app->flash->getMessages());
  
 });
 
