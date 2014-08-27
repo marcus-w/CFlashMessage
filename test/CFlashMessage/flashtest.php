@@ -1,6 +1,6 @@
 <?php
 
-namespace mawd14\CFlashMessage;
+namespace mwhd\CFlashMessage;
 
 require_once(__DIR__ . '/../../src/CFlashMessage/CFlashMessage.php');
 
