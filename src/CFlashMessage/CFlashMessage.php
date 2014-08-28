@@ -87,7 +87,7 @@ if(isset($_SESSION['flash'])) {
 foreach($_SESSION['flash'] as $flashes => $flash) {
 $type = $flash['type'];
 $message = $flash['message'];
-$messages .= "<div class='alert alert-{$type}'>\n";
+$messages .= "<div class='flash_{$type}'>\n";
 $messages .= "\t" . $message . "\n</div>\n";
 }
 // done, clear messages
