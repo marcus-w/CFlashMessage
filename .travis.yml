@@ -8,7 +8,7 @@ before_script:
     - wget https://scrutinizer-ci.com/ocular.phar
 
 script:
-    - phpunit --bootstrap test/CFlashMessage/FlashTest.php --coverage-clover coverage.clover test
+    - phpunit --bootstrap config.php --coverage-clover coverage.clover test
 
 after_script:
     - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
