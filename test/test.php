@@ -22,10 +22,10 @@ $app->router->add('', function() use ($app) {
 
     $app->session;
 
-    $app->flash->add('info', 'This is a info message');
-    $app->flash->add('success', 'This is a success message');
-    $app->flash->add('warning', 'This is a warning message');
-    $app->flash->add('error', 'This is a error message');
+    $app->flash->message('info', 'This is a info message');
+    $app->flash->message('success', 'This is a success message');
+    $app->flash->message('warning', 'This is a warning message');
+    $app->flash->message('error', 'This is a error message');
     
 
     $app->theme->setVariable('title', "Flash test")
