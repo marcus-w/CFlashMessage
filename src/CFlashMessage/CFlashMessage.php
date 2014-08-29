@@ -25,7 +25,7 @@ $_SESSION['flash'] = null;
 /**
 * Set mesage and type
 *
-* @param string $type the message type (info, danger, success, warning)
+* @param string $type the message type (info, success, warning, error)
 * @param string $message the message
 */
 public function message($type = 'info', $message)
