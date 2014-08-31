@@ -23,7 +23,7 @@ date_default_timezone_set('CET');
  * Include autoloader.
  *
  */
-include(ANAX_APP_PATH . 'config/autoloader.php');
+include(ANAX_APP_PATH . '/../autoloader.php');
 
 
 
