@@ -9,6 +9,6 @@ before_script:
 
 script:	
     - phpunit --bootstrap test/config.php --coverage-clover coverage.clover test
-
+	
 after_script:
     - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
