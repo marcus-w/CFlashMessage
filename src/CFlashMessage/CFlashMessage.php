@@ -4,7 +4,6 @@ namespace mwhd\CFlashMessage;
 
 class CFlashMessage
 {
-
 // types of messages that are valid
 public $valid = ['info', 'success', 'warning', 'error'];
 function __construct()
