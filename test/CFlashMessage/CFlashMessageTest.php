@@ -1,5 +1,8 @@
 <?php
 namespace mwhd\CFlashMessage;
+
+require_once(__DIR__ . '/../../src/CFlashMessage/CFlashMessage.php');
+
 class CFlashMessageTest extends \PHPUnit_Framework_TestCase {
 /**
 * Test
