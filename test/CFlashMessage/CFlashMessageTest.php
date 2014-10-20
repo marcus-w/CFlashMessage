@@ -1,5 +1,5 @@
 <?php
-namespace Anax\CFlashMessage;
+namespace mwhd\CFlashMessage;
 class CFlashMessageTest extends \PHPUnit_Framework_TestCase {
 /**
 * Test
@@ -8,7 +8,7 @@ class CFlashMessageTest extends \PHPUnit_Framework_TestCase {
 *
 */
 public function testNoSession(){
-$flash = new \Anax\CFlashMessage\CFlashMessage();
+$flash = new \mwhd\CFlashMessage\CFlashMessage();
 }
 /**
 * Test
@@ -18,7 +18,7 @@ $flash = new \Anax\CFlashMessage\CFlashMessage();
 */
 public function testInfo(){
 //create flash element
-$flash = new \Anax\CFlashMessage\CFlashMessage();
+$flash = new \mwhd\CFlashMessage\CFlashMessage();
 //try to set default message
 $flash->info();
 //try get and remove from session
@@ -46,7 +46,7 @@ $this->assertEquals($res, $exp, "Should be null but is not");
 */
 public function testError(){
 //create flash element
-$flash = new \Anax\CFlashMessage\CFlashMessage();
+$flash = new \mwhd\CFlashMessage\CFlashMessage();
 $message = "test message";
 $flash->error($message);
 $exp = "<div class='errorMessage'>ERROR<br>test message</div>";
@@ -67,7 +67,7 @@ $this->assertEquals($res, $exp, "Should be null but is not");
 */
 public function testWarning(){
 //create flash element
-$flash = new \Anax\CFlashMessage\CFlashMessage();
+$flash = new \mwhd\CFlashMessage\CFlashMessage();
 $message = "test message";
 $flash->warning($message);
 $exp = "<div class='warningMessage'>WARNING<br>test message</div>";
@@ -88,7 +88,7 @@ $this->assertEquals($res, $exp, "Should be null but is not");
 */
 public function testSuccess(){
 //create flash element
-$flash = new \Anax\CFlashMessage\CFlashMessage();
+$flash = new \mwhd\CFlashMessage\CFlashMessage();
 $message = "test message";
 $flash->success($message);
 $exp = "<div class='successMessage'>SUCCESS<br>test message</div>";
