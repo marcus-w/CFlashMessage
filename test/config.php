@@ -31,4 +31,4 @@ include(ANAX_APP_PATH . '/../autoloader.php');
  * Include global functions.
  *
  */
-/*include(ANAX_INSTALL_PATH . 'src/functions.php');*/
+include(ANAX_INSTALL_PATH . 'src/functions.php');
