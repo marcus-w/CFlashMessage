@@ -1,4 +1,5 @@
 <?php
+info', 'success', 'warning', 'error
 namespace mwhd\CFlashMessage;
 
 require_once(__DIR__ . '/../../src/CFlashMessage/CFlashMessage.php');
@@ -19,35 +20,35 @@ $this->assertEquals(null, $_SESSION['flash']);
 public function testMessage()
 {
 $this->flash->message('info', 'Info example message');
-$this->flash->message('danger', 'Danger example message');
-$this->flash->message('success', 'Success example message');
-$this->flash->message('warning', 'Warning example message');
+$this->flash->message('success', 'Danger example message');
+$this->flash->message('warning', 'Success example message');
+$this->flash->message('error', 'Warning example message');
 $this->flash->message('something thats not a supported type', 'Should be info type message');
 $this->assertEquals('info', $_SESSION['flash'][0]['type']);
-$this->assertEquals('danger', $_SESSION['flash'][1]['type']);
-$this->assertEquals('success', $_SESSION['flash'][2]['type']);
-$this->assertEquals('warning', $_SESSION['flash'][3]['type']);
+$this->assertEquals('success', $_SESSION['flash'][1]['type']);
+$this->assertEquals('warning', $_SESSION['flash'][2]['type']);
+$this->assertEquals('error', $_SESSION['flash'][3]['type']);
 $this->assertEquals('info', $_SESSION['flash'][4]['type']);
 $this->assertEquals('Info example message', $_SESSION['flash'][0]['message']);
-$this->assertEquals('Danger example message', $_SESSION['flash'][1]['message']);
-$this->assertEquals('Success example message', $_SESSION['flash'][2]['message']);
-$this->assertEquals('Warning example message', $_SESSION['flash'][3]['message']);
+$this->assertEquals('Success example message', $_SESSION['flash'][1]['message']);
+$this->assertEquals('Warning example message', $_SESSION['flash'][2]['message']);
+$this->assertEquals('Error example message', $_SESSION['flash'][3]['message']);
 $this->assertEquals('Should be info type message', $_SESSION['flash'][4]['message']);
 }
 public function testSpecificMessageFunctions()
 {
 $this->flash->info('Info example message');
-$this->flash->danger('Danger example message');
-$this->flash->success('Success example message');
-$this->flash->warning('Warning example message');
+$this->flash->danger('Success example message');
+$this->flash->success('Warning example message');
+$this->flash->warning('Error example message');
 $this->assertEquals('info', $_SESSION['flash'][0]['type']);
-$this->assertEquals('danger', $_SESSION['flash'][1]['type']);
-$this->assertEquals('success', $_SESSION['flash'][2]['type']);
-$this->assertEquals('warning', $_SESSION['flash'][3]['type']);
+$this->assertEquals('success', $_SESSION['flash'][1]['type']);
+$this->assertEquals('warning', $_SESSION['flash'][2]['type']);
+$this->assertEquals('error', $_SESSION['flash'][3]['type']);
 $this->assertEquals('Info example message', $_SESSION['flash'][0]['message']);
-$this->assertEquals('Danger example message', $_SESSION['flash'][1]['message']);
-$this->assertEquals('Success example message', $_SESSION['flash'][2]['message']);
-$this->assertEquals('Warning example message', $_SESSION['flash'][3]['message']);
+$this->assertEquals('Success example message', $_SESSION['flash'][1]['message']);
+$this->assertEquals('Warning example message', $_SESSION['flash'][2]['message']);
+$this->assertEquals('Error example message', $_SESSION['flash'][3]['message']);
 }
 public function testGetMessages()
 {
