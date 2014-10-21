@@ -21,8 +21,8 @@ public function testMessage()
 {
 $this->flash->message('info', 'Info example message');
 $this->flash->message('success', 'Success example message');
-$this->flash->message('warning', 'Success example message');
-$this->flash->message('error', 'Warning example message');
+$this->flash->message('warning', 'Warning example message');
+$this->flash->message('error', 'Error example message');
 $this->flash->message('something thats not a supported type', 'Should be info type message');
 $this->assertEquals('info', $_SESSION['flash'][0]['type']);
 $this->assertEquals('success', $_SESSION['flash'][1]['type']);
@@ -54,7 +54,7 @@ public function testGetMessages()
 {
 $this->flash->clear();
 $this->flash->message('info', 'Info example message');
-$expectedResult = "<div class='alert alert-info'>\n";
+$expectedResult = "<div class='flash_info'>\n";
 $expectedResult .= "\t" . "Info example message" . "\n</div>\n";
 $this->assertEquals($expectedResult, $this->flash->getMessages());
 }
