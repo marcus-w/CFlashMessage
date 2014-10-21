@@ -20,7 +20,7 @@ $this->assertEquals(null, $_SESSION['flash']);
 public function testMessage()
 {
 $this->flash->message('info', 'Info example message');
-$this->flash->message('success', 'Danger example message');
+$this->flash->message('success', 'Success example message');
 $this->flash->message('warning', 'Success example message');
 $this->flash->message('error', 'Warning example message');
 $this->flash->message('something thats not a supported type', 'Should be info type message');
@@ -38,9 +38,9 @@ $this->assertEquals('Should be info type message', $_SESSION['flash'][4]['messag
 public function testSpecificMessageFunctions()
 {
 $this->flash->info('Info example message');
-$this->flash->danger('Success example message');
-$this->flash->success('Warning example message');
-$this->flash->warning('Error example message');
+$this->flash->success('Success example message');
+$this->flash->warning('Warning example message');
+$this->flash->error('Error example message');
 $this->assertEquals('info', $_SESSION['flash'][0]['type']);
 $this->assertEquals('success', $_SESSION['flash'][1]['type']);
 $this->assertEquals('warning', $_SESSION['flash'][2]['type']);
